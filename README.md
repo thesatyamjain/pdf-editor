@@ -1,470 +1,219 @@
 # PDF Editor
 
-A comprehensive, full-featured PDF editor built with modern web technologies, enabling seamless document manipulation and editing capabilities.
+A powerful and user-friendly PDF editing tool that allows you to easily modify, annotate, and manage PDF documents with a clean and intuitive interface.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+## 📋 Table of Contents
 
----
-
-## Table of Contents
-
+- [Overview](#overview)
 - [Features](#features)
-- [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
 
----
+## Overview
 
-## Features
+PDF Editor is a comprehensive solution for editing and managing PDF documents. Whether you need to add annotations, modify text, merge documents, or extract content, this tool provides a seamless experience for all your PDF editing needs.
 
-### Document Management
-- ✅ **Open & Load PDFs** - Load PDF files from your system or URLs
-- ✅ **Save Documents** - Export edited PDFs to your device
-- ✅ **Print Support** - Print edited PDFs directly from the editor
+Built with modern technologies, PDF Editor offers:
+- **Fast Performance**: Optimized for handling large PDF files
+- **User-Friendly Interface**: Intuitive design for easy navigation
+- **Cross-Platform Support**: Works on Windows, macOS, and Linux
+- **Open Source**: Community-driven development and transparency
 
-### Text Editing
-- ✅ **Add Text** - Insert text annotations at any location on the page
-- ✅ **Text Formatting** - Control font size, color, and style
-- ✅ **Text Deletion** - Remove unwanted text elements
-- ✅ **Text Editing** - Modify existing text content and properties
+## ✨ Features
 
-### Drawing & Markup Tools
-- ✅ **Freehand Drawing** - Draw shapes and annotations with a brush tool
-- ✅ **Line Drawing** - Create precise straight lines
-- ✅ **Rectangle Tool** - Draw rectangular shapes
-- ✅ **Circle/Ellipse Tool** - Draw circular and elliptical shapes
-- ✅ **Highlighting** - Highlight important sections of text
-- ✅ **Color Selection** - Choose from a palette of colors for all drawing tools
-- ✅ **Stroke Width Control** - Adjust brush/line thickness
-
-### Page Management
-- ✅ **Page Navigation** - Move between pages with ease
-- ✅ **Zoom In/Out** - Adjust zoom level for better visibility
-- ✅ **Fit to Page** - Auto-fit PDF to window size
-- ✅ **Page Rotation** - Rotate pages for proper viewing orientation
+### Core Editing Features
+- **Text Editing**: Add, modify, and delete text within PDF documents
+- **Annotations**: Add highlights, underlines, strikethrough, and notes
+- **Drawing Tools**: Freehand drawing and shape insertion
+- **Page Management**: Add, delete, reorder, and rotate pages
+- **Merge & Split**: Combine multiple PDFs or split documents into separate files
 
 ### Advanced Features
-- ✅ **Undo/Redo** - Revert or reapply changes
-- ✅ **Keyboard Shortcuts** - Quick access to common operations
-- ✅ **Dark Mode** - Eye-friendly dark theme support
-- ✅ **Responsive Design** - Works seamlessly on different screen sizes
+- **OCR Support**: Extract text from scanned PDFs
+- **Form Filling**: Fill out interactive PDF forms
+- **Watermarks**: Add text or image watermarks to documents
+- **Compression**: Reduce file size while maintaining quality
+- **Export Options**: Save as PDF, images, or other formats
+- **Undo/Redo**: Full support for operation history
 
----
+### Document Management
+- **Batch Processing**: Process multiple files simultaneously
+- **Template Support**: Save and reuse document templates
+- **Search & Replace**: Find and replace text across documents
+- **Password Protection**: Secure documents with encryption
 
-## Tech Stack
-
-### Frontend
-- **React** - UI library for building dynamic components
-- **TypeScript** - Type-safe JavaScript for better code quality
-- **Canvas API** - For drawing and rendering PDF annotations
-- **PDF.js** - Mozilla's PDF rendering library for document handling
-- **Tailwind CSS** - Utility-first CSS framework for styling
-
-### State Management
-- **Redux Toolkit** / **Context API** - Efficient state management
-
-### Build Tools
-- **Vite** - Lightning-fast build tool and dev server
-- **Webpack** - Module bundler for production builds
-
-### Testing
-- **Jest** - Testing framework
-- **React Testing Library** - Component testing utilities
-
-### Additional Libraries
-- **React Router** - Client-side routing
-- **Axios** - HTTP client for API requests
-- **Zustand** / **Jotai** - Lightweight state management alternatives
-
----
-
-## Installation
+## 📦 Installation
 
 ### Prerequisites
-- **Node.js** (v16 or higher)
-- **npm** (v8 or higher) or **yarn** (v3 or higher)
+- Node.js (version 14.0 or higher)
+- npm (version 6.0 or higher) or yarn
+- Git
 
-### Clone the Repository
+### From Source
 
-```bash
-git clone https://github.com/thesatyamjain/pdf-editor.git
-cd pdf-editor
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/thesatyamjain/pdf-editor.git
+   cd pdf-editor
+   ```
 
-### Install Dependencies
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Using npm:
-```bash
-npm install
-```
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-Or using yarn:
-```bash
-yarn install
-```
+   The application will open in your default browser at `http://localhost:3000`
 
-### Environment Setup
+4. **Build for production**
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
 
-Create a `.env` file in the root directory:
+   The optimized build will be generated in the `build/` directory.
 
-```env
-REACT_APP_API_URL=http://localhost:3000
-REACT_APP_PDF_WORKER_URL=/pdf.worker.min.js
-REACT_APP_ENV=development
-```
+### Using Docker
 
-### Build the Project
+1. **Build the Docker image**
+   ```bash
+   docker build -t pdf-editor .
+   ```
 
-```bash
-npm run build
-```
+2. **Run the container**
+   ```bash
+   docker run -p 3000:3000 pdf-editor
+   ```
 
-Or with yarn:
-```bash
-yarn build
-```
+   Access the application at `http://localhost:3000`
 
----
+## 🚀 Usage
 
-## Usage
+### Getting Started
 
-### Starting the Development Server
+1. **Open a PDF**
+   - Click the "Open" button or drag and drop a PDF file into the editor
+   - The document will load and display in the main editing area
 
-```bash
-npm start
-```
+2. **Edit Your Document**
+   - Use the toolbar to access editing tools
+   - Select the tool you need (text, annotations, drawing, etc.)
+   - Click or draw on the PDF to apply changes
 
-Or with yarn:
-```bash
-yarn start
-```
+3. **Save Your Work**
+   - Click "Save" to download the modified PDF
+   - Choose your desired export format if needed
+   - The file will be saved to your downloads folder
 
-The application will open at `http://localhost:3000` in your default browser.
+### Common Tasks
 
-### Basic Workflow
+#### Adding Text
+1. Click the "Text" tool in the toolbar
+2. Click on the PDF where you want to add text
+3. Type your text
+4. Click elsewhere to finish editing
 
-#### 1. **Opening a PDF**
-   - Click the "Open PDF" button or drag and drop a PDF file
-   - Select a file from your system
-   - The PDF will load and display the first page
+#### Adding Annotations
+1. Select the annotation tool (highlight, underline, etc.)
+2. Click and drag to select the area or text
+3. The annotation will be applied immediately
 
-#### 2. **Navigation**
-   - Use the page navigation controls at the bottom to move between pages
-   - Display current page number and total page count
-   - Jump to a specific page using the page input field
+#### Merging PDFs
+1. Click "File" → "Merge"
+2. Select multiple PDF files
+3. Arrange the order as needed
+4. Click "Merge" to combine them
 
-#### 3. **Zoom Controls**
-   - Click the zoom in/out buttons to adjust the view
-   - Use the zoom percentage dropdown for preset zoom levels
-   - "Fit to Page" button automatically adjusts zoom to fit the window
-
-#### 4. **Drawing Tools**
-
-   **Freehand Brush:**
-   - Select the brush tool from the toolbar
-   - Click and drag on the PDF to draw freely
-   - Adjust color and stroke width as needed
-
-   **Line Tool:**
-   - Click the line tool icon
-   - Click to set the start point
-   - Click again to set the end point
-
-   **Rectangle/Shape Tools:**
-   - Select the desired shape tool
-   - Click and drag to create the shape
-   - Release to finalize the shape
-
-#### 5. **Text Annotations**
-   - Click the "Add Text" button
-   - Click on the PDF where you want to insert text
-   - Type your text in the popup dialog
-   - Adjust font size and color as needed
-   - Click "Done" to place the text
-
-#### 6. **Highlighting**
-   - Select the highlight tool
-   - Click and drag to highlight text or areas
-   - Choose highlight color from the palette
-
-#### 7. **Editing Existing Elements**
-   - Double-click on text to edit its content
-   - Drag elements to reposition them
-   - Use the color picker to change element colors
-   - Right-click for delete and other options
-
-#### 8. **Saving Your Work**
-   - Click the "Download PDF" button
-   - The edited PDF will be saved to your downloads folder
-   - Original file remains unchanged
-
-#### 9. **Printing**
-   - Click the "Print" button
-   - Configure print settings in the print dialog
-   - Print to physical printer or save as PDF
+#### Splitting a PDF
+1. Open the PDF you want to split
+2. Click "File" → "Split"
+3. Select the pages or page ranges to extract
+4. Click "Split" to create separate documents
 
 ### Keyboard Shortcuts
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl + Z` / `Cmd + Z` | Undo |
-| `Ctrl + Y` / `Cmd + Y` | Redo |
-| `Ctrl + S` / `Cmd + S` | Save PDF |
-| `Ctrl + P` / `Cmd + P` | Print |
-| `Ctrl + O` / `Cmd + O` | Open PDF |
-| `+` | Zoom In |
-| `-` | Zoom Out |
-| `0` | Reset Zoom |
-| `→` | Next Page |
-| `←` | Previous Page |
+| `Ctrl+O` / `Cmd+O` | Open file |
+| `Ctrl+S` / `Cmd+S` | Save file |
+| `Ctrl+Z` / `Cmd+Z` | Undo |
+| `Ctrl+Y` / `Cmd+Y` | Redo |
+| `Ctrl+A` / `Cmd+A` | Select all |
+| `Delete` | Delete selected content |
+| `+` / `-` | Zoom in/out |
+| `Ctrl+F` / `Cmd+F` | Find text |
 
----
+## 🛠️ Development
 
-## Configuration
-
-### Customizing Toolbar
-
-Edit the toolbar configuration in `src/config/toolbar.config.ts`:
-
-```typescript
-export const TOOLBAR_CONFIG = {
-  tools: [
-    'open',
-    'save',
-    'print',
-    'separator',
-    'undo',
-    'redo',
-    'separator',
-    'brush',
-    'line',
-    'rectangle',
-    'circle',
-    'highlight',
-    'text',
-    'separator',
-    'zoomIn',
-    'zoomOut',
-    'fitPage',
-  ],
-};
-```
-
-### Adjusting Canvas Settings
-
-Modify `src/config/canvas.config.ts` for drawing properties:
-
-```typescript
-export const CANVAS_CONFIG = {
-  defaultColor: '#000000',
-  defaultStrokeWidth: 2,
-  defaultFontSize: 14,
-  minZoom: 50,
-  maxZoom: 400,
-};
-```
-
----
-
-## Project Structure
-
+### Project Structure
 ```
 pdf-editor/
-├── public/
-│   ├── index.html
-│   └── pdf.worker.min.js
-├── src/
-│   ├── components/
-│   │   ├── Toolbar.tsx
-│   │   ├── Canvas.tsx
-│   │   ├── PageNavigator.tsx
-│   │   └── ...
-│   ├── pages/
-│   │   └── Editor.tsx
-│   ├── store/
-│   │   ├── editorStore.ts
-│   │   └── ...
-│   ├── utils/
-│   │   ├── pdfUtils.ts
-│   │   ├── canvasUtils.ts
-│   │   └── ...
-│   ├── types/
-│   │   └── index.ts
-│   ├── config/
-│   │   ├── toolbar.config.ts
-│   │   └── canvas.config.ts
-│   ├── App.tsx
-│   └── main.tsx
-├── tests/
-│   ├── components/
-│   └── utils/
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
+├── public/           # Static assets
+├── src/             # Source code
+│   ├── components/  # React components
+│   ├── pages/       # Page components
+│   ├── utils/       # Utility functions
+│   ├── styles/      # CSS styles
+│   └── App.js       # Main app component
+├── package.json     # Dependencies
+└── README.md        # This file
 ```
-
----
-
-## API Endpoints (if applicable)
-
-If your PDF editor includes backend functionality:
-
-### Upload PDF
-```
-POST /api/pdf/upload
-Content-Type: multipart/form-data
-
-Response:
-{
-  "id": "pdf_123",
-  "filename": "document.pdf",
-  "url": "/pdf/123",
-  "uploadedAt": "2025-12-24T11:12:22Z"
-}
-```
-
-### Save Annotations
-```
-POST /api/pdf/:id/annotations
-Content-Type: application/json
-
-Body:
-{
-  "annotations": [...]
-}
-
-Response:
-{
-  "success": true,
-  "message": "Annotations saved"
-}
-```
-
----
-
-## Development
 
 ### Running Tests
-
 ```bash
-npm run test
+npm test
+# or
+yarn test
 ```
 
-### Code Linting
-
+### Code Style
+This project uses ESLint and Prettier for code quality. Run:
 ```bash
-npm run lint
+npm run lint        # Check code style
+npm run format      # Auto-format code
 ```
 
-### Format Code
+## 🤝 Contributing
 
-```bash
-npm run format
-```
+We welcome contributions! Please follow these steps:
 
-### Build for Production
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+5. Push to the branch (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request
 
-```bash
-npm run build
-```
+Please ensure your code follows our style guidelines and includes appropriate tests.
 
----
-
-## Performance Tips
-
-- **Lazy Load PDFs**: Load large PDFs page by page
-- **Optimize Images**: Compress images before adding to PDFs
-- **Cache Renderings**: Store rendered pages in memory
-- **Debounce Events**: Debounce zoom and scroll events
-- **Use Web Workers**: Offload heavy computations to workers
-
----
-
-## Troubleshooting
-
-### PDF Won't Load
-- Ensure the PDF file is not corrupted
-- Check browser console for error messages
-- Verify CORS settings if loading from external URLs
-
-### Performance Issues
-- Reduce the PDF file size
-- Lower the zoom level
-- Close other browser tabs
-- Clear browser cache
-
-### Annotations Not Saving
-- Check network connection
-- Verify API endpoint configuration
-- Ensure proper permissions are set
-
----
-
-## Browser Support
-
-- ✅ Chrome/Edge 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Opera 76+
-
----
-
-## Contributing
-
-We welcome contributions! Here's how to get started:
-
-1. **Fork the Repository** - Click the "Fork" button
-2. **Create a Branch** - `git checkout -b feature/your-feature`
-3. **Make Changes** - Implement your feature
-4. **Commit Changes** - `git commit -m "Add your feature"`
-5. **Push to Branch** - `git push origin feature/your-feature`
-6. **Open a Pull Request** - Submit your PR for review
-
-### Code Guidelines
-- Follow the existing code style
-- Write meaningful commit messages
-- Add tests for new features
-- Update documentation as needed
-
----
-
-## License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+## 💬 Support
 
-## Contact & Support
+For issues, questions, or suggestions:
+- Open an [Issue](https://github.com/thesatyamjain/pdf-editor/issues) on GitHub
+- Contact us through the project's discussions
+- Check existing documentation for solutions
 
-- **Author**: [Satyam Jain](https://github.com/thesatyamjain)
-- **Issues**: [GitHub Issues](https://github.com/thesatyamjain/pdf-editor/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/thesatyamjain/pdf-editor/discussions)
+## 🙏 Acknowledgments
 
----
-
-## Acknowledgments
-
-- [Mozilla PDF.js](https://mozilla.github.io/pdf.js/) - For PDF rendering
-- [React](https://react.dev/) - UI framework
-- [Tailwind CSS](https://tailwindcss.com/) - Styling framework
-- All contributors and users who have helped improve this project
+- Built with [React](https://reactjs.org/)
+- PDF processing powered by [PDF.js](https://mozilla.github.io/pdf.js/)
+- UI components from [Material-UI](https://material-ui.com/)
 
 ---
 
-## Changelog
-
-### Version 1.0.0 (2025-12-24)
-- Initial release with full PDF editing capabilities
-- All drawing tools implemented
-- Text annotation support
-- Page navigation and zoom controls
-- Save and print functionality
-
----
-
-**Happy Editing! 🎉**
+**Made with ❤️ by [thesatyamjain](https://github.com/thesatyamjain)**
